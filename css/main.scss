@@ -122,10 +122,14 @@ body {
     }
   }
   .content-bd{
-    margin-top: 30px;
+    padding: 15px 50px 30px;
+    @media screen and (max-width: 760px){
+      &{
+        padding: 10px 30px;
+      }
+    }
     .skill {
       width: 100%;
-      padding: 0 30px;
     }
     .section-header{
       position: relative;
@@ -227,7 +231,6 @@ body {
     }
     .sections{
       width: 100%;
-      padding: 20px 30px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;

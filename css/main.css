@@ -151,12 +151,17 @@ body::-webkit-scrollbar {
 }
 
 .content .content-bd {
-  margin-top: 30px;
+  padding: 15px 50px 30px;
+}
+
+@media screen and (max-width: 760px) {
+  .content .content-bd {
+    padding: 10px 30px;
+  }
 }
 
 .content .content-bd .skill {
   width: 100%;
-  padding: 0 30px;
 }
 
 .content .content-bd .section-header {
@@ -284,7 +289,6 @@ body::-webkit-scrollbar {
 
 .content .content-bd .sections {
   width: 100%;
-  padding: 20px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
