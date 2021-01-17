@@ -4,10 +4,14 @@ html,
 body {
   min-height: 100%;
   background-color: #eee;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome Safari */
 }
 
 .qs-icon {
@@ -146,14 +150,18 @@ body {
   }
 }
 
+.content .content-bd {
+  margin-top: 30px;
+}
+
 .content .content-bd .skill {
   width: 100%;
-  padding: 20px 30px;
+  padding: 0 30px;
 }
 
 .content .content-bd .section-header {
   position: relative;
-  margin: 10px 0;
+  margin: 15px 0;
   height: 32px;
   line-height: 32px;
 }
@@ -190,7 +198,6 @@ body {
 
 .content .content-bd .section-bd {
   width: 100%;
-  padding: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   display: -webkit-box;
@@ -204,11 +211,20 @@ body {
 .content .content-bd .section-bd .item {
   width: 48%;
   color: #333;
+}
+
+.content .content-bd .section-bd .item:not(:last-child) {
   margin-bottom: 20px;
 }
 
 .content .content-bd .section-bd .item .item-hd {
   margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .content .content-bd .section-bd .item .item-hd h3 {
@@ -231,6 +247,7 @@ body {
 
 .content .content-bd .section-bd .item .item-bd p {
   line-height: 1.5;
+  text-indent: 2em;
 }
 
 .content .content-bd .section-bd .item .item-bd .item-content {

@@ -1,12 +1,15 @@
 @import url('./reset.css');
 @import url('//at.alicdn.com/t/font_1186631_kqyrtvia2lj.css');
 
-
 html,
 body {
   min-height: 100%;
   background-color:#eee;
-  user-select: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+  }
 }
 
 .qs-icon {
@@ -119,13 +122,14 @@ body {
     }
   }
   .content-bd{
+    margin-top: 30px;
     .skill {
       width: 100%;
-      padding: 20px 30px;
+      padding: 0 30px;
     }
     .section-header{
       position: relative;
-      margin: 10px 0;
+      margin: 15px 0;
       height: 32px;
       line-height: 32px;
       &::before,&::after{
@@ -157,16 +161,19 @@ body {
     }
     .section-bd {
       width: 100%;
-      padding: 20px;
       flex-wrap: wrap;
       display: flex;
       justify-content: space-between;
       .item {
         width: 48%;
         color: #333;
-        margin-bottom: 20px;
+        &:not(:last-child){
+          margin-bottom: 20px;
+        }
         .item-hd {
           margin-bottom: 5px;
+          display: flex;
+          justify-content: space-between;
           h3 {
             font-weight: 600;
             font-size: 14px;
@@ -187,6 +194,7 @@ body {
         .item-bd{
           p{
             line-height: 1.5;
+            text-indent: 2em;
           }
           .item-content{
             text-align: justify;
